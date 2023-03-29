@@ -72,4 +72,16 @@ public class UserManagementController {
         umService.delete(username);
         return "redirect:/user/list";
     }
+
+    @GetMapping("/register")
+    public ModelAndView register() {
+        return new ModelAndView("register", "ticketUser", new Form());
+    }
+
+    @PostMapping("/register")
+    public String register(Form form) throws IOException {
+        umService.createTicketUser(form.getUsername(),
+                form.getPassword(), new String[]{"CUSTOMER"});
+        return "redirect:/register";
+    }
 }
