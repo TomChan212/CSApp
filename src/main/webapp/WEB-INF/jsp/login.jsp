@@ -18,5 +18,5 @@
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
     <input type="submit" value="Log In"/>
 </form>
-<p>Don't have an account? <a href="register.jsp">Register here</a></p>
+<p>Don't have an account? <a href="register">Register here</a></p>
 
